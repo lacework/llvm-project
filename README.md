@@ -11,7 +11,12 @@ git checkout "llvmorg-$VERSION"
 cd ..
 mkdir llvm-release
 cd llvm-release
-../llvm-project/llvm/utils/release/test-release.sh -lldb -release ${VERSION} -triple ${HOST_TRIPLE} -final -no-test-suite
+../llvm-project/llvm/utils/release/test-release.sh \
+  -lldb \
+  -release ${VERSION} \
+  -triple ${HOST_TRIPLE} \
+  -final \
+  -no-test-suite
 ```
 
 The result will then be found in `llvm-release/final`.
